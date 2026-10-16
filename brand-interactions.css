@@ -1,3 +1,7 @@
+:root {
+  --sans: var(--font);
+}
+
 .hero-cta {
   position: relative;
   isolation: isolate;
@@ -14,7 +18,7 @@
 
 .hero-cta-pill {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 5px;
   left: 0;
   width: 0;
@@ -23,7 +27,7 @@
   border-radius: 999px;
   background: var(--green);
   box-shadow: 0 0 0 3px #10130f, 0 0 0 5px rgba(194, 238, 116, 0.92), 0 5px 18px rgba(194, 238, 116, 0.15);
-  transition: width 420ms cubic-bezier(0.2, 0.9, 0.25, 1), transform 520ms cubic-bezier(0.2, 0.9, 0.25, 1);
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), width 350ms ease;
   pointer-events: none;
 }
 
@@ -43,7 +47,7 @@
 
 .hero-cta-link {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -172,6 +176,161 @@
   max-width: 1680px;
   padding-right: 6%;
   padding-left: 6%;
+}
+
+/* Lift secondary copy and small labels for comfortable reading. */
+.hero-footnote {
+  color: #c0c6b8;
+  font: 500 11px/1.5 var(--sans);
+  letter-spacing: 0;
+}
+
+.hero-lede,
+.intro-content > p,
+.principles-copy > p,
+.build-copy > p,
+.closing-cta > p {
+  color: #c2c7ba;
+}
+
+.intro-content > p {
+  font-size: 15px;
+}
+
+.feature-card > p,
+.principle-list p {
+  color: #bcc2b4;
+  font-size: 13px;
+}
+
+.principles-copy > p,
+.build-copy > p {
+  font-size: 14px;
+}
+
+.closing-cta > p {
+  font-size: 13px;
+}
+
+.signal-strip {
+  color: #c3c8bb;
+  font-size: 10px;
+}
+
+.feature-number,
+.log-header,
+.log-item > span:first-child,
+.log-item small,
+.log-footer,
+.footer > span,
+.footer > small {
+  color: #b7beaa;
+}
+
+.feature-number {
+  font-size: 9px;
+}
+
+.mini-insight b {
+  font-size: 9px;
+}
+
+.mini-insight small,
+.log-item small {
+  color: #c0c6b8;
+  font-size: 8px;
+}
+
+.log-status {
+  color: #d1f28f;
+  font-size: 8px;
+}
+
+.log-item.future {
+  opacity: 1;
+}
+
+.log-item.future > span:first-child,
+.log-item.future small {
+  color: #aeb6a2;
+}
+
+.footer > span,
+.footer > small,
+.footer a {
+  font-size: 11px;
+}
+
+/* Supporting dashboard labels stay legible against their dark panels. */
+.card-top,
+.machine-title small,
+.phone-greeting small,
+.activity-head,
+.process-name small,
+.process-load small,
+.metric small,
+.card-bottom,
+.floating-note small {
+  color: #b5bdab;
+}
+
+.card-top,
+.machine-title small,
+.phone-greeting small,
+.activity-head,
+.process-name small,
+.process-load small,
+.metric small,
+.card-bottom,
+.floating-note small {
+  font-size: 8px;
+}
+
+.card-top b {
+  font-size: 8px;
+}
+
+.metric-head {
+  font-size: 9px;
+}
+
+.health-pill {
+  color: #d5e8bd;
+  font-size: 9px;
+}
+
+.phone-health small,
+.phone-caption,
+.phone-action,
+.phone-action small {
+  color: #46533e;
+}
+
+.phone-health small,
+.phone-caption,
+.phone-action small {
+  font-size: 8px;
+}
+
+.phone-action {
+  font-size: 8px;
+}
+
+@media (max-width: 700px) {
+  .signal-strip {
+    font-size: 9px;
+  }
+
+  .intro-content > p {
+    font-size: 14px;
+  }
+
+  .feature-card > p,
+  .principle-list p,
+  .principles-copy > p,
+  .build-copy > p {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 980px) {

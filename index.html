@@ -251,12 +251,6 @@
         });
       });
 
-      group.addEventListener("pointerleave", () => {
-        setActive(group.querySelector(":focus") || links[0]);
-      });
-      group.addEventListener("focusout", (event) => {
-        if (!group.contains(event.relatedTarget)) setActive(links[0]);
-      });
       window.addEventListener("resize", () => setActive(group.querySelector(".is-active") || links[0]));
       setActive(links[0]);
     })();
