@@ -144,7 +144,8 @@ body {
 .log-header,
 .log-item>span:first-child {
     font: 10px var(--mono);
-    letter-spacing: 1.5px
+    letter-spacing: 1.5px;
+    text-decoration: none;
 }
 
 .eyebrow {
@@ -792,7 +793,8 @@ h2 em {
 
 .section-kicker {
     color: var(--green);
-    font-size: 9px
+    font-size: 9px;
+    text-decoration: none;
 }
 
 .intro-content h2,
@@ -1230,7 +1232,8 @@ h2 em {
 .closing-cta h2,
 .closing-cta p,
 .closing-cta a {
-    position: relative
+    position: relative;
+    text-decoration: none;
 }
 
 .closing-cta h2 {
