@@ -1,0 +1,42 @@
+# Go
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Node / React Native
+node_modules/
+.npm/
+.yarn/
+.pnp.*
+dist/
+build/
+.expo/
+.gradle/
+android/.cxx/
+android/app/build/
+ios/Pods/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and coverage
+*.log
+coverage/
+
