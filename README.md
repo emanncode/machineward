@@ -24,7 +24,7 @@ Machineward is in early development.
 
 The first version is being designed and tested around:
 
-- Pop!_OS 24.04 LTS
+- Pop!\_OS 24.04 LTS
 - x86_64 desktop systems
 - One paired phone and computer
 - CPU, per-core, memory, swap, and process information
@@ -98,7 +98,7 @@ Security requirements will be treated as a release gate before external users ar
 - Health summary
 - Plain-language resource insights
 - One safe process action
-- Pop!_OS 24.04 LTS support
+- Pop!\_OS 24.04 LTS support
 
 ### V1
 

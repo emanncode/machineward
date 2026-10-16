@@ -19,4 +19,3 @@ I will acknowledge reports as soon as practical and keep the reporter informed w
 Machineward is designed around encrypted transport, short-lived pairing credentials, session revocation, authorization checks, rate limits, and an explicit action allowlist. These controls are part of the release gate before external users are invited to connect a phone to a computer.
 
 Please do not use development builds to control a machine containing sensitive data.
-

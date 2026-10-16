@@ -11,7 +11,7 @@ Machineward is being built in public. This roadmap describes the current directi
 - [ ] Display a basic health summary in the mobile app
 - [ ] Add plain-language resource insights
 - [ ] Add one safe, allowlisted process action
-- [ ] Test on Pop!_OS 24.04 LTS x86_64
+- [ ] Test on Pop!\_OS 24.04 LTS x86_64
 - [ ] Document the security release gate
 
 ## V1 — Usable personal companion
@@ -39,4 +39,3 @@ Machineward is being built in public. This roadmap describes the current directi
 - Arbitrary shell commands
 - File browsing or transfer
 - Enterprise fleet management
-
