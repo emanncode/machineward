@@ -1,102 +1,220 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#10130f" />
-    <meta name="description" content="Machineward is an open-source, privacy-first phone companion for understanding your personal computer and taking safe, limited action." />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Machineward — Know what your computer is doing" />
-    <meta property="og:description" content="An open-source phone companion for understanding your PC and acting when it matters." />
-    <title>Machineward — Know what your computer is doing</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="#top" aria-label="Machineward home">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>machineward</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#how">How it works</a>
-          <a href="#principles">Principles</a>
-          <a class="nav-cta" href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Follow the build <span aria-hidden="true">↗</span></a>
-        </nav>
-      </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="live-dot"></span> OPEN SOURCE · IN THE MAKING</p>
-            <h1>Know what your<br /><em>computer is doing.</em></h1>
-            <p class="hero-lede">A phone companion for understanding your PC’s health, seeing what needs attention, and taking a few safe actions from wherever you are.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#how">What we’re building <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="hero-footnote"><span class="tiny-line"></span> Linux first. Your machine, your data, your control.</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10130f" />
+  <meta name="description"
+    content="Machineward is an open-source, privacy-first phone companion for understanding your personal computer and taking safe, limited action." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Machineward — Know what your computer is doing" />
+  <meta property="og:description"
+    content="An open-source phone companion for understanding your PC and acting when it matters." />
+  <title>Machineward — Know what your computer is doing</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Machineward home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>machineward</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#how">How it works</a>
+        <a href="#principles">Principles</a>
+        <a class="nav-cta" href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Follow the
+          build <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> OPEN SOURCE · IN THE MAKING</p>
+          <h1>Know what your<br /><em>computer is doing.</em></h1>
+          <p class="hero-lede">A phone companion for understanding your PC’s health, seeing what needs attention, and
+            taking a few safe actions from wherever you are.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/emanncode/machineward" target="_blank"
+              rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#how">What we’re building <span aria-hidden="true">↓</span></a>
           </div>
-
-          <div class="product-stage" aria-label="Illustration of a Machineward system status dashboard">
-            <div class="stage-glow"></div>
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="desktop-card">
-              <div class="card-top"><div class="window-dots"><i></i><i></i><i></i></div><span>YOUR MACHINE <b>● ONLINE</b></span><span class="menu-dots">···</span></div>
-              <div class="machine-title"><div><small>SYSTEM OVERVIEW</small><h2>Workstation</h2></div><span class="health-pill"><i></i> Looking good</span></div>
-              <div class="metric-grid">
-                <div class="metric"><div class="metric-head"><span>CPU</span><span>32%</span></div><div class="meter"><i style="width:32%"></i></div><small>8 cores · 2.8 GHz</small></div>
-                <div class="metric"><div class="metric-head"><span>MEMORY</span><span>68%</span></div><div class="meter"><i class="meter-warm" style="width:68%"></i></div><small>10.9 of 16 GB</small></div>
-              </div>
-              <div class="activity"><div class="activity-head"><span>RECENT ACTIVITY</span><a href="#how">View all ↗</a></div>
-                <div class="process"><span class="process-icon icon-blue">⌘</span><span class="process-name"><b>code</b><small>Visual Studio Code</small></span><span class="process-load">12.4% <small>CPU</small></span><span class="process-state"><i></i></span></div>
-                <div class="process"><span class="process-icon icon-amber">◉</span><span class="process-name"><b>node</b><small>Development server</small></span><span class="process-load">4.1% <small>CPU</small></span><span class="process-state"><i></i></span></div>
-              </div>
-              <div class="card-bottom"><span><i></i> Updated just now</span><span>Pop!_OS 24.04</span></div>
-            </div>
-            <div class="phone-card">
-              <div class="phone-speaker"></div><div class="phone-status"><span>9:41</span><span>••• ▰</span></div>
-              <div class="phone-greeting"><small>GOOD AFTERNOON</small><b>Your PC is<br />doing fine.</b></div>
-              <div class="phone-health"><div class="health-ring"><span>OK</span></div><div><b>All clear</b><small>No action needed</small></div></div>
-              <div class="phone-bars"><span style="height:22%"></span><span style="height:36%"></span><span style="height:29%"></span><span style="height:56%"></span><span style="height:44%"></span><span style="height:72%"></span><span style="height:48%"></span><span style="height:62%"></span><span style="height:41%"></span><span style="height:85%"></span><span style="height:54%"></span><span style="height:67%"></span><span style="height:40%"></span><span style="height:58%"></span><span style="height:33%"></span><span style="height:47%"></span></div>
-              <div class="phone-caption">CPU · LAST HOUR</div>
-              <div class="phone-action"><span>Most active</span><b>code <small>12% CPU</small></b><i>›</i></div>
-              <div class="phone-nav"><i class="selected"></i><i></i><i></i></div>
-            </div>
-            <div class="floating-note"><span class="note-icon">↗</span><span><b>Build still running</b><small>CPU activity is steady</small></span></div>
+          <div class="hero-footnote"><span class="tiny-line"></span> Linux first. Your machine, your data, your control.
           </div>
-        </section>
+        </div>
 
-        <section class="signal-strip" aria-label="Project attributes">
-          <span><i>01</i> OPEN SOURCE</span><span><i>02</i> LINUX FIRST</span><span><i>03</i> PRIVACY BY DESIGN</span><span><i>04</i> BUILT IN PUBLIC</span>
-        </section>
+        <div class="product-stage" aria-label="Illustration of a Machineward system status dashboard">
+          <div class="stage-glow"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="desktop-card">
+            <div class="card-top">
+              <div class="window-dots"><i></i><i></i><i></i></div><span>YOUR MACHINE <b>● ONLINE</b></span><span
+                class="menu-dots">···</span>
+            </div>
+            <div class="machine-title">
+              <div><small>SYSTEM OVERVIEW</small>
+                <h2>Workstation</h2>
+              </div><span class="health-pill"><i></i> Looking good</span>
+            </div>
+            <div class="metric-grid">
+              <div class="metric">
+                <div class="metric-head"><span>CPU</span><span>32%</span></div>
+                <div class="meter"><i style="width:32%"></i></div><small>8 cores · 2.8 GHz</small>
+              </div>
+              <div class="metric">
+                <div class="metric-head"><span>MEMORY</span><span>68%</span></div>
+                <div class="meter"><i class="meter-warm" style="width:68%"></i></div><small>10.9 of 16 GB</small>
+              </div>
+            </div>
+            <div class="activity">
+              <div class="activity-head"><span>RECENT ACTIVITY</span><a href="#how">View all ↗</a></div>
+              <div class="process"><span class="process-icon icon-blue">⌘</span><span
+                  class="process-name"><b>code</b><small>Visual Studio Code</small></span><span
+                  class="process-load">12.4% <small>CPU</small></span><span class="process-state"><i></i></span></div>
+              <div class="process"><span class="process-icon icon-amber">◉</span><span
+                  class="process-name"><b>node</b><small>Development server</small></span><span
+                  class="process-load">4.1% <small>CPU</small></span><span class="process-state"><i></i></span></div>
+            </div>
+            <div class="card-bottom"><span><i></i> Updated just now</span><span>Pop!_OS 24.04</span></div>
+          </div>
+          <div class="phone-card">
+            <div class="phone-speaker"></div>
+            <div class="phone-status"><span>9:41</span><span>••• ▰</span></div>
+            <div class="phone-greeting"><small>GOOD AFTERNOON</small><b>Your PC is<br />doing fine.</b></div>
+            <div class="phone-health">
+              <div class="health-ring"><span>OK</span></div>
+              <div><b>All clear</b><small>No action needed</small></div>
+            </div>
+            <div class="phone-bars"><span style="height:22%"></span><span style="height:36%"></span><span
+                style="height:29%"></span><span style="height:56%"></span><span style="height:44%"></span><span
+                style="height:72%"></span><span style="height:48%"></span><span style="height:62%"></span><span
+                style="height:41%"></span><span style="height:85%"></span><span style="height:54%"></span><span
+                style="height:67%"></span><span style="height:40%"></span><span style="height:58%"></span><span
+                style="height:33%"></span><span style="height:47%"></span></div>
+            <div class="phone-caption">CPU · LAST HOUR</div>
+            <div class="phone-action"><span>Most active</span><b>code <small>12% CPU</small></b><i>›</i></div>
+            <div class="phone-nav"><i class="selected"></i><i></i><i></i></div>
+          </div>
+          <div class="floating-note"><span class="note-icon">↗</span><span><b>Build still running</b><small>CPU activity
+                is steady</small></span></div>
+        </div>
+      </section>
 
-        <section class="intro-section" id="how">
-          <div class="section-kicker">01 / THE IDEA</div>
-          <div class="intro-content"><h2>Your computer is busy.<br /><em>You shouldn’t have to guess.</em></h2><p>Long builds, local services, downloads and renders keep running after you step away. Machineward is being built to make their state understandable at a glance—and give you a small, deliberate set of ways to respond.</p></div>
-        </section>
+      <section class="signal-strip" aria-label="Project attributes">
+        <span><i>01</i> OPEN SOURCE</span><span><i>02</i> LINUX FIRST</span><span><i>03</i> PRIVACY BY
+          DESIGN</span><span><i>04</i> BUILT IN PUBLIC</span>
+      </section>
 
-        <section class="feature-section">
-          <article class="feature-card feature-large"><span class="feature-number">01 — SEE THE STATE</span><div class="feature-icon icon-pulse"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 21h8l4-11 7 22 5-15 3 4h5"/></svg></div><h3>A clear picture<br />of your machine.</h3><p>CPU, memory, swap and active processes—brought together in one calm, readable view.</p><div class="feature-decoration bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-          <article class="feature-card"><span class="feature-number">02 — UNDERSTAND WHY</span><div class="feature-icon icon-spark">✳</div><h3>Useful context.<br />Not just numbers.</h3><p>Plain-language insights explain what may need your attention and what the data actually says.</p><div class="mini-insight"><i></i><span><b>Memory use is elevated</b><small>Browser tabs are using 4.2 GB</small></span><span class="mini-arrow">↗</span></div></article>
-          <article class="feature-card feature-action"><span class="feature-number">03 — ACT WITH INTENT</span><div class="feature-icon icon-action">↗</div><h3>Small actions.<br />Clear boundaries.</h3><p>Take a few explicit, allowlisted actions. No shell access. No remote desktop. No surprises.</p><div class="action-chip"><span>End process</span><b>Review first</b><i>→</i></div></article>
-        </section>
+      <section class="intro-section" id="how">
+        <div class="section-kicker">01 / THE IDEA</div>
+        <div class="intro-content">
+          <h2>Your computer is busy.<br /><em>You shouldn’t have to guess.</em></h2>
+          <p>Long builds, local services, downloads and renders keep running after you step away. Machineward is being
+            built to make their state understandable at a glance—and give you a small, deliberate set of ways to
+            respond.</p>
+        </div>
+      </section>
 
-        <section class="principles-section" id="principles">
-          <div class="principles-copy"><div class="section-kicker">02 / BUILT WITH CARE</div><h2>Remote access<br />should feel <em>responsible.</em></h2><p>Machineward is designed around a simple idea: remote visibility should help you understand your machine without opening it up to everything.</p><a class="text-link" href="https://github.com/emanncode/machineward/blob/main/SECURITY.md" target="_blank" rel="noreferrer">Read our security direction <span>↗</span></a></div>
-          <div class="principle-list"><div><span>01</span><b>Your data stays yours</b><p>Privacy is a design requirement, not a setting to find later.</p></div><div><span>02</span><b>Every action has a boundary</b><p>Only specific, understood actions belong in the product.</p></div><div><span>03</span><b>Security blocks release</b><p>Pairing, authorization and revocation must work before outside use.</p></div></div>
-        </section>
+      <section class="feature-section">
+        <article class="feature-card feature-large"><span class="feature-number">01 — SEE THE STATE</span>
+          <div class="feature-icon icon-pulse"><svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M4 21h8l4-11 7 22 5-15 3 4h5" />
+            </svg></div>
+          <h3>A clear picture<br />of your machine.</h3>
+          <p>CPU, memory, swap and active processes—brought together in one calm, readable view.</p>
+          <div class="feature-decoration bars">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="feature-card"><span class="feature-number">02 — UNDERSTAND WHY</span>
+          <div class="feature-icon icon-spark">✳</div>
+          <h3>Useful context.<br />Not just numbers.</h3>
+          <p>Plain-language insights explain what may need your attention and what the data actually says.</p>
+          <div class="mini-insight"><i></i><span><b>Memory use is elevated</b><small>Browser tabs are using 4.2
+                GB</small></span><span class="mini-arrow">↗</span></div>
+        </article>
+        <article class="feature-card feature-action"><span class="feature-number">03 — ACT WITH INTENT</span>
+          <div class="feature-icon icon-action">↗</div>
+          <h3>Small actions.<br />Clear boundaries.</h3>
+          <p>Take a few explicit, allowlisted actions. No shell access. No remote desktop. No surprises.</p>
+          <div class="action-chip"><span>End process</span><b>Review first</b><i>→</i></div>
+        </article>
+      </section>
 
-        <section class="build-section"><div class="build-copy"><div class="section-kicker">03 / THE BUILD</div><h2>Early days.<br /><em>Open notebook.</em></h2><p>Machineward is in early development. Follow the decisions, tradeoffs and milestones as the first Linux prototype takes shape.</p><a class="button button-dark" href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Follow on GitHub <span>↗</span></a></div><div class="build-log"><div class="log-header"><span>BUILD LOG</span><span class="log-status"><i></i> IN PROGRESS</span></div><div class="log-item"><span>NOW</span><div><b>Project foundation</b><small>Product direction, scope and security gate</small></div><span class="log-check">✓</span></div><div class="log-item active"><span>NEXT</span><div><b>V0 architecture</b><small>Agent · relay · mobile app boundaries</small></div><span class="log-pending">●</span></div><div class="log-item future"><span>AFTER</span><div><b>First Linux agent</b><small>Pop!_OS 24.04 · x86_64</small></div><span class="log-empty"></span></div><a class="log-footer" href="https://github.com/emanncode/machineward/issues" target="_blank" rel="noreferrer">See the V0 issues <span>↗</span></a></div></section>
+      <section class="principles-section" id="principles">
+        <div class="principles-copy">
+          <div class="section-kicker">02 / BUILT WITH CARE</div>
+          <h2>Remote access<br />should feel <em>responsible.</em></h2>
+          <p>Machineward is designed around a simple idea: remote visibility should help you understand your machine
+            without opening it up to everything.</p><a class="text-link"
+            href="https://github.com/emanncode/machineward/blob/EmannCode01-main/SECURITY.md" target="_blank" rel="noreferrer">Read
+            our security direction <span>↗</span></a>
+        </div>
+        <div class="principle-list">
+          <div><span>01</span><b>Your data stays yours</b>
+            <p>Privacy is a design requirement, not a setting to find later.</p>
+          </div>
+          <div><span>02</span><b>Every action has a boundary</b>
+            <p>Only specific, understood actions belong in the product.</p>
+          </div>
+          <div><span>03</span><b>Security blocks release</b>
+            <p>Pairing, authorization and revocation must work before outside use.</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="closing-cta"><div class="closing-orb"></div><div class="section-kicker">MACHINEWARD / 2026</div><h2>Step away.<br /><em>Stay in the know.</em></h2><p>An open-source companion for the computer you already trust.</p><a class="button button-primary" href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Follow the project <span>↗</span></a></section>
-      </main>
+      <section class="build-section">
+        <div class="build-copy">
+          <div class="section-kicker">03 / THE BUILD</div>
+          <h2>Early days.<br /><em>Open notebook.</em></h2>
+          <p>Machineward is in early development. Follow the decisions, tradeoffs and milestones as the first Linux
+            prototype takes shape.</p><a class="button button-dark" href="https://github.com/emanncode/machineward"
+            target="_blank" rel="noreferrer">Follow on GitHub <span>↗</span></a>
+        </div>
+        <div class="build-log">
+          <div class="log-header"><span>BUILD LOG</span><span class="log-status"><i></i> IN PROGRESS</span></div>
+          <div class="log-item"><span>NOW</span>
+            <div><b>Project foundation</b><small>Product direction, scope and security gate</small></div><span
+              class="log-check">✓</span>
+          </div>
+          <div class="log-item active"><span>NEXT</span>
+            <div><b>V0 architecture</b><small>Agent · relay · mobile app boundaries</small></div><span
+              class="log-pending">●</span>
+          </div>
+          <div class="log-item future"><span>AFTER</span>
+            <div><b>First Linux agent</b><small>Pop!_OS 24.04 · x86_64</small></div><span class="log-empty"></span>
+          </div><a class="log-footer" href="https://github.com/emanncode/machineward/issues" target="_blank"
+            rel="noreferrer">See the V0 issues <span>↗</span></a>
+        </div>
+      </section>
 
-      <footer class="footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>machineward</span></a><span>Open source, built in public.</span><div><a href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linear.app/emanncode/project/machineward-e87dae88c42d" target="_blank" rel="noreferrer">Roadmap ↗</a></div><small>© 2026 EmannCode</small></footer>
-    </div>
-  </body>
+      <section class="closing-cta">
+        <div class="closing-orb"></div>
+        <div class="section-kicker">MACHINEWARD / 2026</div>
+        <h2>Step away.<br /><em>Stay in the know.</em></h2>
+        <p>An open-source companion for the computer you already trust.</p><a class="button button-primary"
+          href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">Follow the project
+          <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark"
+          aria-hidden="true"><span></span><span></span><span></span></span><span>machineward</span></a><span>Open
+        source, built in public.</span>
+      <div><a href="https://github.com/emanncode/machineward" target="_blank" rel="noreferrer">GitHub ↗</a><a
+          href="https://linear.app/emanncode/project/machineward-e87dae88c42d" target="_blank" rel="noreferrer">Roadmap
+          ↗</a></div><small>© 2026 EmannCode</small>
+    </footer>
+  </div>
+</body>
+
 </html>
