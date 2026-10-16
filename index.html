@@ -19,6 +19,7 @@
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/brand-interactions.css" />
 </head>
 
 <body>
@@ -43,11 +44,14 @@
           <h1>Know what your<br /><em>computer is doing.</em></h1>
           <p class="hero-lede">A phone companion for understanding your PC’s health, seeing what needs attention, and
             taking a few safe actions from wherever you are.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/emanncode/machineward" target="_blank"
-              rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#how">What we’re building <span aria-hidden="true">↓</span></a>
-          </div>
+          <nav class="hero-cta" data-active="project" aria-label="Project links">
+            <span class="hero-cta-pill" aria-hidden="true"></span>
+            <a class="hero-cta-link is-active" data-cta="project" href="https://github.com/emanncode/machineward"
+              target="_blank" rel="noreferrer"><span>Explore the project</span><span class="hero-cta-icon"
+                aria-hidden="true">↗</span></a>
+            <a class="hero-cta-link" data-cta="building" href="#how"><span>What we’re building</span><span
+                class="hero-cta-icon" aria-hidden="true">↓</span></a>
+          </nav>
           <div class="hero-footnote"><span class="tiny-line"></span> Linux first. Your machine, your data, your control.
           </div>
         </div>
@@ -116,9 +120,11 @@
       </section>
 
       <section class="intro-section" id="how">
-        <div class="section-kicker">01 / THE IDEA</div>
         <div class="intro-content">
-          <h2>Your computer is busy.<br /><em>You shouldn’t have to guess.</em></h2>
+          <header class="intro-heading">
+            <p class="section-kicker intro-kicker">01 / THE IDEA</p>
+            <h2>Your computer is busy.<br /><em>You shouldn’t have to guess.</em></h2>
+          </header>
           <p>Long builds, local services, downloads and renders keep running after you step away. Machineward is being
             built to make their state understandable at a glance—and give you a small, deliberate set of ways to
             respond.</p>
@@ -133,7 +139,8 @@
           <h3>A clear picture<br />of your machine.</h3>
           <p>CPU, memory, swap and active processes—brought together in one calm, readable view.</p>
           <div class="feature-decoration bars">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
         </article>
         <article class="feature-card"><span class="feature-number">02 — UNDERSTAND WHY</span>
           <div class="feature-icon icon-spark">✳</div>
@@ -156,7 +163,8 @@
           <h2>Remote access<br />should feel <em>responsible.</em></h2>
           <p>Machineward is designed around a simple idea: remote visibility should help you understand your machine
             without opening it up to everything.</p><a class="text-link"
-            href="https://github.com/emanncode/machineward/blob/EmannCode01-main/SECURITY.md" target="_blank" rel="noreferrer">Read
+            href="https://github.com/emanncode/machineward/blob/EmannCode01-main/SECURITY.md" target="_blank"
+            rel="noreferrer">Read
             our security direction <span>↗</span></a>
         </div>
         <div class="principle-list">
@@ -215,6 +223,43 @@
           ↗</a></div><small>© 2026 EmannCode</small>
     </footer>
   </div>
+  <script>
+    (() => {
+      const group = document.querySelector(".hero-cta");
+      if (!group) return;
+
+      const pill = group.querySelector(".hero-cta-pill");
+      const links = [...group.querySelectorAll("[data-cta]")];
+      let pressedTimer;
+
+      const setActive = (link) => {
+        if (!link) return;
+        group.dataset.active = link.dataset.cta;
+        links.forEach((item) => item.classList.toggle("is-active", item === link));
+        pill.style.width = `${link.offsetWidth}px`;
+        pill.style.transform = `translateX(${link.offsetLeft}px)`;
+      };
+
+      links.forEach((link) => {
+        link.addEventListener("pointerenter", () => setActive(link));
+        link.addEventListener("focus", () => setActive(link));
+        link.addEventListener("click", () => {
+          group.classList.add("is-pressed");
+          window.clearTimeout(pressedTimer);
+          pressedTimer = window.setTimeout(() => group.classList.remove("is-pressed"), 300);
+        });
+      });
+
+      group.addEventListener("pointerleave", () => {
+        setActive(group.querySelector(":focus") || links[0]);
+      });
+      group.addEventListener("focusout", (event) => {
+        if (!group.contains(event.relatedTarget)) setActive(links[0]);
+      });
+      window.addEventListener("resize", () => setActive(group.querySelector(".is-active") || links[0]));
+      setActive(links[0]);
+    })();
+  </script>
 </body>
 
 </html>
