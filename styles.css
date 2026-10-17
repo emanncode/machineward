@@ -1364,13 +1364,25 @@ h2 em {
         overflow: hidden
     }
 
+    .phone-card {
+        left: 1%;
+        top: 215px;
+        transform: rotateY(8deg) rotateZ(-4deg) scale(.78);
+        transform-origin: top left
+    }
+
     .topbar nav {
         gap: 20px
     }
 
     .feature-section {
         padding-left: 0;
-        padding-right: 0
+        padding-right: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .feature-large {
+        grid-column: 1 / -1
     }
 
     .principles-section,
@@ -1403,7 +1415,8 @@ h2 em {
 
 @media(max-width:700px) {
     .site-shell {
-        padding: 0 22px
+        padding: 0 22px;
+        overflow-x: clip
     }
 
     .topbar {
@@ -1452,7 +1465,7 @@ h2 em {
 
     .product-stage {
         margin: 0 -16px;
-        height: 390px;
+        height: 450px;
         overflow: hidden;
         transform: none;
         transform-origin: center
@@ -1461,7 +1474,7 @@ h2 em {
     .desktop-card {
         right: 0;
         top: 52px;
-        width: 82%;
+        width: min(82%, 430px);
         height: 262px;
         padding: 0 13px
     }
@@ -1525,8 +1538,8 @@ h2 em {
 
     .phone-card {
         left: 1%;
-        top: 98px;
-        transform: rotateY(8deg) rotateZ(-4deg) scale(.9);
+        top: 175px;
+        transform: rotateY(8deg) rotateZ(-4deg) scale(.78);
         transform-origin: top left
     }
 
@@ -1576,8 +1589,14 @@ h2 em {
         min-height: 290px
     }
 
+    .mini-insight,
+    .action-chip {
+        position: static;
+        margin-top: 16px
+    }
+
     .feature-large {
-        min-height: 310px
+        min-height: 340px
     }
 
     .principles-section {
