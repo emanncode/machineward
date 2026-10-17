@@ -1358,6 +1358,7 @@ h2 em {
     }
 
     .product-stage {
+        height: 520px;
         transform: scale(.9);
         transform-origin: center right;
         margin-left: -35px;
@@ -1366,8 +1367,8 @@ h2 em {
 
     .phone-card {
         left: 1%;
-        top: 215px;
-        transform: rotateY(8deg) rotateZ(-4deg) scale(.78);
+        top: 235px;
+        transform: rotateY(8deg) rotateZ(-4deg) scale(.8);
         transform-origin: top left
     }
 
@@ -1465,7 +1466,7 @@ h2 em {
 
     .product-stage {
         margin: 0 -16px;
-        height: 450px;
+        height: 520px;
         overflow: hidden;
         transform: none;
         transform-origin: center
@@ -1538,8 +1539,8 @@ h2 em {
 
     .phone-card {
         left: 1%;
-        top: 175px;
-        transform: rotateY(8deg) rotateZ(-4deg) scale(.78);
+        top: 235px;
+        transform: rotateY(8deg) rotateZ(-4deg) scale(.8);
         transform-origin: top left
     }
 
