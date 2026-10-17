@@ -173,7 +173,7 @@ body {
 
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1.06fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
     align-items: center;
     min-height: 640px;
     padding: 54px 0 78px;
@@ -315,7 +315,8 @@ h2 em {
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 900px
+    perspective: 900px;
+    min-width: 0
 }
 
 .stage-glow {
@@ -868,7 +869,7 @@ h2 em {
 
 .feature-section {
     display: grid;
-    grid-template-columns: 1.1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 1fr));
     gap: 12px;
     padding: 0 4% 128px
 }
@@ -1199,7 +1200,7 @@ h2 em {
 
 .log-item {
     display: grid;
-    grid-template-columns: 52px 1fr 15px;
+    grid-template-columns: 52px minmax(0, 1fr) 15px;
     gap: 8px;
     align-items: center;
     padding: 16px 17px;
@@ -1359,7 +1360,8 @@ h2 em {
     .product-stage {
         transform: scale(.9);
         transform-origin: center right;
-        margin-left: -35px
+        margin-left: -35px;
+        overflow: hidden
     }
 
     .topbar nav {
@@ -1375,6 +1377,11 @@ h2 em {
     .build-section {
         padding-left: 0;
         padding-right: 0;
+        gap: 45px
+    }
+
+    .build-section {
+        grid-template-columns: 1fr;
         gap: 45px
     }
 
@@ -1446,6 +1453,7 @@ h2 em {
     .product-stage {
         margin: 0 -16px;
         height: 390px;
+        overflow: hidden;
         transform: none;
         transform-origin: center
     }
@@ -1453,7 +1461,7 @@ h2 em {
     .desktop-card {
         right: 0;
         top: 52px;
-        width: 75%;
+        width: 82%;
         height: 262px;
         padding: 0 13px
     }

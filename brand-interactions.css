@@ -472,6 +472,19 @@
   }
 }
 
+@media (max-width: 380px) {
+  .hero-cta-link {
+    gap: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 9px;
+  }
+
+  .hero-cta-icon {
+    font-size: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-cta-pill,
   .hero-cta-pill::after,
