@@ -40,9 +40,9 @@ Machineward is planned as three main components:
 
 - **Desktop agent** — runs on the user’s computer and collects system state
 - **Relay service** — helps the phone and computer communicate without requiring direct inbound access
-- **Mobile app** — displays system health and provides bounded remote actions
+- **Mobile app** — built with React Native and Expo; displays system health and provides bounded remote actions
 
-The initial implementation is planned with Go for the desktop and relay components, and React Native for the mobile application.
+The initial implementation uses Go for the desktop and relay components, and React Native with Expo for the mobile application. The agent and relay share one Go module in this monorepo. See the [V0 architecture decision](docs/architecture/0001-v0-architecture.md) and [protocol contract](protocol/README.md).
 
 ## Scope
 

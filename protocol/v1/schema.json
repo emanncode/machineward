@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:machineward:protocol:v1",
+  "title": "Machineward protocol envelope v1",
+  "description": "Initial contract for local relay registration, routing probes, and system metrics.",
+  "oneOf": [
+    { "$ref": "#/$defs/agentHello" },
+    { "$ref": "#/$defs/relayProbe" },
+    { "$ref": "#/$defs/relayProbeAck" },
+    { "$ref": "#/$defs/metricsSnapshot" },
+    { "$ref": "#/$defs/error" }
+  ],
+  "$defs": {
+    "envelope": {
+      "type": "object",
+      "required": ["version", "id", "type", "sent_at", "payload"],
+      "properties": {
+        "version": { "const": 1 },
+        "id": { "type": "string", "format": "uuid" },
+        "type": { "type": "string" },
+        "sent_at": { "type": "string", "format": "date-time" },
+        "payload": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "agentHello": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "agent.hello" },
+            "payload": {
+              "type": "object",
+              "required": ["agent_id", "agent_version", "os", "arch"],
+              "properties": {
+                "agent_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+                "agent_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+                "os": { "const": "linux" },
+                "arch": { "const": "amd64" }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "relayProbe": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "relay.probe" },
+            "payload": {
+              "type": "object",
+              "required": ["text"],
+              "properties": { "text": { "type": "string", "maxLength": 256 } },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "relayProbeAck": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "relay.probe_ack" },
+            "payload": {
+              "type": "object",
+              "required": ["text"],
+              "properties": { "text": { "type": "string", "maxLength": 256 } },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "metricsSnapshot": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "metrics.snapshot" },
+            "payload": {
+              "type": "object",
+              "required": ["collected_at", "cpu", "memory", "swap", "processes"],
+              "properties": {
+                "collected_at": { "type": "string", "format": "date-time" },
+                "cpu": {
+                  "type": "object",
+                  "required": ["total_percent", "per_core_percent"],
+                  "properties": {
+                    "total_percent": { "$ref": "#/$defs/percentage" },
+                    "per_core_percent": {
+                      "type": "array",
+                      "items": { "$ref": "#/$defs/percentage" }
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "memory": { "$ref": "#/$defs/memory" },
+                "swap": { "$ref": "#/$defs/memory" },
+                "processes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["pid", "name", "cpu_percent", "memory_bytes", "started_at_unix_ms"],
+                    "properties": {
+                      "pid": { "type": "integer", "minimum": 1 },
+                      "name": { "type": "string", "maxLength": 256 },
+                    "cpu_percent": { "type": "number", "minimum": 0 },
+                      "memory_bytes": { "type": "integer", "minimum": 0 },
+                      "started_at_unix_ms": { "type": "integer", "minimum": 0 }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "error": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "error" },
+            "payload": {
+              "type": "object",
+              "required": ["code", "message"],
+              "properties": {
+                "code": { "type": "string", "minLength": 1, "maxLength": 64 },
+                "message": { "type": "string", "maxLength": 512 }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "memory": {
+      "type": "object",
+      "required": ["total_bytes", "used_bytes", "used_percent"],
+      "properties": {
+        "total_bytes": { "type": "integer", "minimum": 0 },
+        "used_bytes": { "type": "integer", "minimum": 0 },
+        "used_percent": { "$ref": "#/$defs/percentage" }
+      },
+      "additionalProperties": false
+    },
+    "percentage": { "type": "number", "minimum": 0, "maximum": 100 }
+  }
+}

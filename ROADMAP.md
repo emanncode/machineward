@@ -4,7 +4,7 @@ Machineward is being built in public. This roadmap describes the current directi
 
 ## V0 — Focused Linux prototype
 
-- [ ] Define the agent, relay, and mobile application boundaries
+- [x] Define the agent, relay, and mobile application boundaries ([V0 architecture decision](docs/architecture/0001-v0-architecture.md), [protocol v1](protocol/README.md))
 - [ ] Build a desktop agent prototype
 - [ ] Collect CPU, per-core, memory, swap, and process metrics
 - [ ] Add a secure one-time pairing flow
