@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Machineward",
+    "slug": "machineward",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/machineward-avatar.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0D100C",
+        "foregroundImage": "./assets/machineward-avatar.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
