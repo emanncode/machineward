@@ -100,35 +100,10 @@ body {
 }
 
 .brand-mark {
-    width: 27px;
-    height: 27px;
-    border: 1px solid var(--mw-accent-border);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    transform: rotate(-8deg)
-}
-
-.brand-mark span {
+    width: 32px;
+    height: 32px;
     display: block;
-    width: 3px;
-    border-radius: 3px;
-    background: var(--mw-accent);
-    transform: rotate(8deg)
-}
-
-.brand-mark span:nth-child(1) {
-    height: 8px
-}
-
-.brand-mark span:nth-child(2) {
-    height: 14px
-}
-
-.brand-mark span:nth-child(3) {
-    height: 10px
+    flex: 0 0 auto
 }
 
 .topbar nav {
@@ -1320,8 +1295,8 @@ h2 em {
 }
 
 .footer .brand-mark {
-    width: 23px;
-    height: 23px
+    width: 27px;
+    height: 27px
 }
 
 .footer>span {

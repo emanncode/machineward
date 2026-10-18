@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0D100C"/>
+  <image x="72" y="65" width="54" height="54" href="mark.svg"/>
+  <text x="146" y="102" fill="#F1F2E9" font-family="Arial,sans-serif" font-size="27" font-weight="700">machineward</text>
+  <path d="M72 157h620" stroke="#303A2B"/>
+  <text x="80" y="252" fill="#F1F2E9" font-family="Arial,sans-serif" font-size="61">Your PC keeps</text>
+  <text x="80" y="326" fill="#C5F477" font-family="Georgia,serif" font-size="67" font-style="italic">working.</text>
+  <text x="80" y="366" fill="#F1F2E9" font-family="Arial,sans-serif" font-size="32">You shouldn’t have to guess.</text>
+  <text x="82" y="419" fill="#B8C0AD" font-family="Arial,sans-serif" font-size="22">A phone companion for understanding your PC,</text>
+  <text x="82" y="450" fill="#B8C0AD" font-family="Arial,sans-serif" font-size="22">and acting when it matters.</text>
+  <image x="710" y="177" width="440" height="320" href="../illustrations/open-doodles-laying.svg" preserveAspectRatio="xMidYMid meet"/>
+  <path d="M72 526h1056" stroke="#303A2B"/>
+  <text x="80" y="570" fill="#C5F477" font-family="monospace" font-size="13" letter-spacing="2">OPEN SOURCE</text>
+  <text x="243" y="570" fill="#929B88" font-family="monospace" font-size="13">·</text>
+  <text x="270" y="570" fill="#C5F477" font-family="monospace" font-size="13" letter-spacing="2">LINUX FIRST</text>
+  <text x="427" y="570" fill="#929B88" font-family="monospace" font-size="13">·</text>
+  <text x="454" y="570" fill="#C5F477" font-family="monospace" font-size="13" letter-spacing="2">BUILT IN PUBLIC</text>
+</svg>
