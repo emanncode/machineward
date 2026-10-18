@@ -495,5 +495,53 @@
         setActive(links[0]);
       })();
     </script>
+    <script>
+      (() => {
+        const stage = document.querySelector(".product-stage");
+        const desktop = stage?.querySelector(".desktop-card");
+        const phone = stage?.querySelector(".phone-card");
+        const canParallax = window.matchMedia(
+          "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+        );
+
+        if (!stage || !desktop || !phone || !canParallax.matches) return;
+
+        let frame = 0;
+        let point = null;
+
+        const update = () => {
+          frame = 0;
+          if (!point) return;
+
+          const bounds = stage.getBoundingClientRect();
+          const x = Math.max(
+            -1,
+            Math.min(1, ((point.x - bounds.left) / bounds.width - 0.5) * 2),
+          );
+          const y = Math.max(
+            -1,
+            Math.min(1, ((point.y - bounds.top) / bounds.height - 0.5) * 2),
+          );
+
+          desktop.style.setProperty("--scene-x", `${x * 5}px`);
+          desktop.style.setProperty("--scene-y", `${y * 4}px`);
+          phone.style.setProperty("--scene-x", `${x * -8}px`);
+          phone.style.setProperty("--scene-y", `${y * -6}px`);
+        };
+
+        stage.addEventListener("pointermove", (event) => {
+          point = { x: event.clientX, y: event.clientY };
+          if (!frame) frame = window.requestAnimationFrame(update);
+        });
+
+        stage.addEventListener("pointerleave", () => {
+          point = null;
+          desktop.style.setProperty("--scene-x", "0px");
+          desktop.style.setProperty("--scene-y", "0px");
+          phone.style.setProperty("--scene-x", "0px");
+          phone.style.setProperty("--scene-y", "0px");
+        });
+      })();
+    </script>
   </body>
 </html>
