@@ -10,6 +10,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.emanncode.machineward",
       "adaptiveIcon": {
         "backgroundColor": "#0D100C",
         "foregroundImage": "./assets/machineward-avatar.png"
