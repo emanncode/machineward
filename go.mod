@@ -2,7 +2,10 @@ module github.com/emanncode/machineward
 
 go 1.26.0
 
-require github.com/shirou/gopsutil/v4 v4.26.9
+require (
+	github.com/google/jsonschema-go v0.4.3
+	github.com/shirou/gopsutil/v4 v4.26.9
+)
 
 require (
 	github.com/ebitengine/purego v0.11.1 // indirect

@@ -103,6 +103,10 @@ func NewEnvelope(messageType string, payload any) (Envelope, error) {
 
 // DecodeMessage parses and validates the versioned envelope and payload.
 func DecodeMessage(data []byte) (Envelope, error) {
+	if err := validateSchema(data); err != nil {
+		return Envelope{}, fmt.Errorf("validate protocol schema: %w", err)
+	}
+
 	var message Envelope
 	if err := decodeStrict(data, &message); err != nil {
 		return Envelope{}, fmt.Errorf("decode envelope: %w", err)

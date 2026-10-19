@@ -16,7 +16,11 @@
       "required": ["version", "id", "type", "sent_at", "payload"],
       "properties": {
         "version": { "const": 1 },
-        "id": { "type": "string", "format": "uuid" },
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
         "type": { "type": "string" },
         "sent_at": { "type": "string", "format": "date-time" },
         "payload": { "type": "object" }
