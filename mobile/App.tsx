@@ -13,9 +13,12 @@ const colors = {
 
 export default function App() {
   return (
-    <ScrollView style={styles.safeArea}>
+    <View style={styles.safeArea}>
       <StatusBar style="light" />
-      <ScrollView contentContainerStyle={styles.page}>
+      <ScrollView
+        contentContainerStyle={styles.page}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.header}>
           <Image
             source={require("./assets/machineward-avatar.png")}
@@ -35,8 +38,13 @@ export default function App() {
         </View>
 
         <View style={styles.emptyCard}>
-          <View style={styles.statusRow}>
-            <View style={styles.statusDot} />
+          <View
+            style={styles.statusRow}
+            accessible
+            accessibilityRole="text"
+            accessibilityLabel="Connection status: No computer connected."
+          >
+            <View style={styles.statusDot} accessibilityElementsHidden />
             <Text style={styles.statusText}>No computer connected</Text>
           </View>
           <View style={styles.rule} />
@@ -45,11 +53,19 @@ export default function App() {
             Machineward is in early development. Secure pairing is the next part
             of the build.
           </Text>
-          <View style={styles.disabledButton}>
+          <View
+            style={styles.disabledButton}
+            accessible
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            accessibilityLabel="Pair a computer. Pairing is not available yet."
+          >
             <Text style={styles.disabledButtonText}>Pair a computer</Text>
-            <Text style={styles.buttonArrow}>↗</Text>
+            <Text style={styles.buttonArrow} accessibilityElementsHidden>↗</Text>
           </View>
-          <Text style={styles.note}>Pairing is not available yet</Text>
+          <Text style={styles.note} accessibilityElementsHidden>
+            Pairing is not available yet
+          </Text>
         </View>
 
         <View style={styles.footer}>
@@ -59,7 +75,7 @@ export default function App() {
           <Text style={styles.footerVersion}>Built in public by EmannCode</Text>
         </View>
       </ScrollView>
-    </ScrollView>
+    </View>
   );
 }
 
