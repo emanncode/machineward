@@ -1,24 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 const colors = {
-  background: '#0D100C',
-  surface: '#171D15',
-  border: '#303A2A',
-  text: '#F1F2E9',
-  muted: '#ABB3A2',
-  accent: '#C5F477',
-  quiet: '#252D22',
+  background: "#0D100C",
+  surface: "#171D15",
+  border: "#303A2A",
+  text: "#F1F2E9",
+  muted: "#ABB3A2",
+  accent: "#C5F477",
+  quiet: "#252D22",
 };
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <ScrollView style={styles.safeArea}>
       <StatusBar style="light" />
       <ScrollView contentContainerStyle={styles.page}>
         <View style={styles.header}>
           <Image
-            source={require('./assets/machineward-avatar.png')}
+            source={require("./assets/machineward-avatar.png")}
             style={styles.mark}
             accessibilityElementsHidden
           />
@@ -53,11 +53,13 @@ export default function App() {
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.footerText}>Linux first · Your machine, your data, your control.</Text>
+          <Text style={styles.footerText}>
+            Linux first · Your machine, your data, your control.
+          </Text>
           <Text style={styles.footerVersion}>Built in public by EmannCode</Text>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </ScrollView>
   );
 }
 
@@ -74,8 +76,8 @@ const styles = StyleSheet.create({
   },
   header: {
     minHeight: 44,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   mark: {
     width: 28,
@@ -85,11 +87,11 @@ const styles = StyleSheet.create({
   wordmark: {
     color: colors.text,
     fontSize: 16,
-    fontWeight: '700',
+    fontWeight: "700",
     letterSpacing: -0.4,
   },
   version: {
-    marginLeft: 'auto',
+    marginLeft: "auto",
     color: colors.muted,
     fontSize: 9,
     letterSpacing: 1.1,
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 34,
     lineHeight: 40,
-    fontWeight: '600',
+    fontWeight: "600",
     letterSpacing: -1.2,
   },
   body: {
@@ -128,8 +130,8 @@ const styles = StyleSheet.create({
   },
   statusRow: {
     minHeight: 24,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   statusDot: {
     width: 7,
@@ -151,7 +153,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     color: colors.text,
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: "600",
     letterSpacing: -0.4,
   },
   cardBody: {
@@ -168,14 +170,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     backgroundColor: colors.quiet,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   disabledButtonText: {
     color: colors.muted,
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   buttonArrow: {
     color: colors.muted,
@@ -185,10 +187,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: colors.muted,
     fontSize: 11,
-    textAlign: 'center',
+    textAlign: "center",
   },
   footer: {
-    marginTop: 'auto',
+    marginTop: "auto",
     paddingTop: 32,
   },
   footerText: {
@@ -198,7 +200,7 @@ const styles = StyleSheet.create({
   },
   footerVersion: {
     marginTop: 8,
-    color: '#737D6D',
+    color: "#737D6D",
     fontSize: 10,
   },
 });
