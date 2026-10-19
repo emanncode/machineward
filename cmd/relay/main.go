@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"io"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -34,11 +36,16 @@ func run() error {
 		Handler:           mux,
 		ReadHeaderTimeout: 5 * time.Second,
 	}
+	listener, err := listen(listenAddress, os.Stdout)
+	if err != nil {
+		return err
+	}
+	defer listener.Close()
+
 	serveErr := make(chan error, 1)
 	go func() {
-		serveErr <- server.ListenAndServe()
+		serveErr <- server.Serve(listener)
 	}()
-	fmt.Printf("Machineward local relay listening at ws://%s/ws (loopback only; no pairing or authentication)\n", listenAddress)
 
 	select {
 	case err := <-serveErr:
@@ -60,4 +67,13 @@ func run() error {
 		return fmt.Errorf("close relay connections: %w", connectionsErr)
 	}
 	return nil
+}
+
+func listen(address string, output io.Writer) (net.Listener, error) {
+	listener, err := net.Listen("tcp", address)
+	if err != nil {
+		return nil, fmt.Errorf("run local relay: %w", err)
+	}
+	fmt.Fprintf(output, "Machineward local relay listening at ws://%s/ws (loopback only; no pairing or authentication)\n", address)
+	return listener, nil
 }
