@@ -73,6 +73,9 @@ type MetricsSnapshot struct {
 	Memory      Memory          `json:"memory"`
 	Swap        Memory          `json:"swap"`
 	Processes   []ProcessMetric `json:"processes"`
+	// ProcessesSkipped counts per-PID read failures, excluding expected exits
+	// and the intentional top-process limit.
+	ProcessesSkipped uint32 `json:"processes_skipped"`
 }
 
 // NewEnvelope creates a message with a random UUID and the current UTC time.
