@@ -4,7 +4,7 @@
 
 The Go decoder embeds and compiles this schema once, then validates every incoming message against it before decoding the typed payload. Keep required fields, types, enums, bounds, and unknown-field rules in the schema so validation does not drift between Go and other clients. Go's timestamp parsing and UUID check enforce those formats because the selected schema validator treats `format` as an annotation.
 
-The first contract slice includes agent registration, typed relay probes, and the V0 metrics snapshot. It is for local development only. It does not define authentication, pairing, command, or action-result messages yet. Do not expose a relay using this contract to an untrusted network.
+The first contract slice includes agent and phone registration, typed relay probes, and the V0 metrics snapshot. It is for local development only. Phone registration does not authenticate or pair a phone. The contract does not define authentication, pairing, command, or action-result messages yet. Do not expose a relay using this contract to an untrusted network.
 
 ## Envelope
 
@@ -19,6 +19,7 @@ Every message has:
 ## Initial message types
 
 - `agent.hello`: agent identity and platform information
+- `phone.hello`: phone identity and the agent ID it wants to connect to
 - `relay.probe`: local routing smoke message
 - `relay.probe_ack`: relay response for a probe
 - `metrics.snapshot`: current CPU, memory, swap, and process information. `processes_skipped` reports per-PID inspection failures encountered by the agent. Process exits during collection are expected and are not counted. The OS can still hide processes from enumeration, so zero does not guarantee that every system process was visible.

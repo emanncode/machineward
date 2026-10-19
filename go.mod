@@ -3,6 +3,7 @@ module github.com/emanncode/machineward
 go 1.26.0
 
 require (
+	github.com/coder/websocket v1.8.15
 	github.com/google/jsonschema-go v0.4.3
 	github.com/shirou/gopsutil/v4 v4.26.9
 )

@@ -20,6 +20,7 @@ func TestDecodeMessageAcceptsEveryV1MessageType(t *testing.T) {
 		payload     string
 	}{
 		{"agent hello", TypeAgentHello, `{"agent_id":"agent-1","agent_version":"0.1.0","os":"linux","arch":"amd64"}`},
+		{"phone hello", TypePhoneHello, `{"phone_id":"phone-1","agent_id":"agent-1"}`},
 		{"relay probe", TypeRelayProbe, `{"text":"ping"}`},
 		{"relay probe acknowledgement", TypeRelayProbeAck, `{"text":"pong"}`},
 		{"metrics snapshot", TypeMetricsSnapshot, `{"collected_at":"2026-10-19T12:00:00Z","cpu":{"total_percent":12.5,"per_core_percent":[10,15]},"memory":{"total_bytes":16000,"used_bytes":8000,"used_percent":50},"swap":{"total_bytes":4000,"used_bytes":0,"used_percent":0},"processes":[{"pid":42,"name":"editor","cpu_percent":125.5,"memory_bytes":2000,"started_at_unix_ms":1729340000000}],"processes_skipped":2}`},
@@ -42,6 +43,10 @@ func TestDecodeMessageRejectsInvalidV1Payloads(t *testing.T) {
 		payload     string
 	}{
 		{"agent hello missing required field", TypeAgentHello, `{"agent_id":"agent-1","agent_version":"0.1.0","os":"linux"}`},
+		{"phone hello missing required field", TypePhoneHello, `{"phone_id":"phone-1"}`},
+		{"phone hello empty ID", TypePhoneHello, `{"phone_id":"","agent_id":"agent-1"}`},
+		{"phone hello string exceeds maximum", TypePhoneHello, `{"phone_id":"phone-1","agent_id":"` + repeat("a", 129) + `"}`},
+		{"phone hello unknown field", TypePhoneHello, `{"phone_id":"phone-1","agent_id":"agent-1","extra":true}`},
 		{"agent hello invalid platform enum", TypeAgentHello, `{"agent_id":"agent-1","agent_version":"0.1.0","os":"windows","arch":"amd64"}`},
 		{"agent hello string exceeds maximum", TypeAgentHello, `{"agent_id":"` + repeat("a", 129) + `","agent_version":"0.1.0","os":"linux","arch":"amd64"}`},
 		{"agent version exceeds maximum", TypeAgentHello, `{"agent_id":"agent-1","agent_version":"` + repeat("a", 65) + `","os":"linux","arch":"amd64"}`},

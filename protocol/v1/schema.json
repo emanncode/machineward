@@ -5,6 +5,7 @@
   "description": "Initial contract for local relay registration, routing probes, and system metrics.",
   "oneOf": [
     { "$ref": "#/$defs/agentHello" },
+    { "$ref": "#/$defs/phoneHello" },
     { "$ref": "#/$defs/relayProbe" },
     { "$ref": "#/$defs/relayProbeAck" },
     { "$ref": "#/$defs/metricsSnapshot" },
@@ -41,6 +42,25 @@
                 "agent_version": { "type": "string", "minLength": 1, "maxLength": 64 },
                 "os": { "const": "linux" },
                 "arch": { "const": "amd64" }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "phoneHello": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "properties": {
+            "type": { "const": "phone.hello" },
+            "payload": {
+              "type": "object",
+              "required": ["phone_id", "agent_id"],
+              "properties": {
+                "phone_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+                "agent_id": { "type": "string", "minLength": 1, "maxLength": 128 }
               },
               "additionalProperties": false
             }

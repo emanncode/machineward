@@ -15,6 +15,7 @@ const Version = 1
 
 const (
 	TypeAgentHello      = "agent.hello"
+	TypePhoneHello      = "phone.hello"
 	TypeRelayProbe      = "relay.probe"
 	TypeRelayProbeAck   = "relay.probe_ack"
 	TypeMetricsSnapshot = "metrics.snapshot"
@@ -37,6 +38,14 @@ type AgentHello struct {
 	AgentVersion string `json:"agent_version"`
 	OS           string `json:"os"`
 	Arch         string `json:"arch"`
+}
+
+// PhoneHello registers one phone against the agent it is allowed to observe.
+// This local relay does not authenticate that claim; production pairing is a
+// separate protocol and security milestone.
+type PhoneHello struct {
+	PhoneID string `json:"phone_id"`
+	AgentID string `json:"agent_id"`
 }
 
 type RelayProbe struct {
@@ -131,6 +140,8 @@ func DecodeMessage(data []byte) (Envelope, error) {
 	switch message.Type {
 	case TypeAgentHello:
 		payload = &AgentHello{}
+	case TypePhoneHello:
+		payload = &PhoneHello{}
 	case TypeRelayProbe, TypeRelayProbeAck:
 		payload = &RelayProbe{}
 	case TypeMetricsSnapshot:
