@@ -1,0 +1,10 @@
+{
+  "name": "machineward",
+  "private": true,
+  "scripts": {
+    "icons:build": "node scripts/build-icon-sprite.mjs"
+  },
+  "devDependencies": {
+    "lucide-static": "^1.60.0"
+  }
+}

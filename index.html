@@ -51,6 +51,7 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/brand-interactions.css" />
+    <link rel="stylesheet" href="/icons.css" />
   </head>
 
   <body>
@@ -68,8 +69,10 @@
             href="https://github.com/emanncode/machineward"
             target="_blank"
             rel="noreferrer"
-            >Follow the build <span aria-hidden="true">↗</span></a
-          >
+            >Follow the build
+            <svg class="inline-icon" aria-hidden="true" focusable="false">
+              <use href="/assets/icons/sprite.svg#lucide-arrow-up-right" /></svg
+          ></a>
         </nav>
       </header>
 
@@ -96,12 +99,26 @@
                 target="_blank"
                 rel="noreferrer"
                 ><span>Explore the project</span
-                ><span class="hero-cta-icon" aria-hidden="true">↗</span></a
-              >
+                ><svg
+                  class="hero-cta-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                  ></use></svg
+              ></a>
               <a class="hero-cta-link" data-cta="building" href="#how"
                 ><span>What we’re building</span
-                ><span class="hero-cta-icon" aria-hidden="true">↓</span></a
-              >
+                ><svg
+                  class="hero-cta-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-down"
+                  ></use></svg
+              ></a>
             </nav>
             <div class="hero-footnote">
               <span class="tiny-line"></span> Linux first. Your machine, your
@@ -149,17 +166,36 @@
               </div>
               <div class="activity">
                 <div class="activity-head">
-                  <span>RECENT ACTIVITY</span><a href="#how">View all ↗</a>
+                  <span>RECENT ACTIVITY</span
+                  ><a href="#how"
+                    >View all
+                    <svg
+                      class="inline-icon"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                      ></use></svg
+                  ></a>
                 </div>
                 <div class="process">
-                  <span class="process-icon icon-blue">⌘</span
+                  <span class="process-icon icon-blue"
+                    ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                      <use
+                        href="/assets/icons/sprite.svg#lucide-code-xml"
+                      ></use></svg></span
                   ><span class="process-name"
                     ><b>code</b><small>Visual Studio Code</small></span
                   ><span class="process-load">12.4% <small>CPU</small></span
                   ><span class="process-state"><i></i></span>
                 </div>
                 <div class="process">
-                  <span class="process-icon icon-amber">◉</span
+                  <span class="process-icon icon-amber"
+                    ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                      <use
+                        href="/assets/icons/sprite.svg#lucide-server"
+                      ></use></svg></span
                   ><span class="process-name"
                     ><b>node</b><small>Development server</small></span
                   ><span class="process-load">4.1% <small>CPU</small></span
@@ -203,14 +239,24 @@
               <div class="phone-caption">CPU · LAST HOUR</div>
               <div class="phone-action">
                 <span>Most active</span><b>code <small>12% CPU</small></b
-                ><i>›</i>
+                ><i
+                  ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/icons/sprite.svg#lucide-chevron-right"
+                    ></use></svg
+                ></i>
               </div>
               <div class="phone-nav">
                 <i class="selected"></i><i></i><i></i>
               </div>
             </div>
             <div class="floating-note">
-              <span class="note-icon">↗</span>
+              <span class="note-icon"
+                ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                  ></use></svg
+              ></span>
               <span>
                 <b>Build still running</b>
                 <small>CPU activity is steady</small>
@@ -267,8 +313,8 @@
           <article class="feature-card feature-large">
             <span class="feature-number">01 — SEE THE STATE</span>
             <div class="feature-icon icon-pulse">
-              <svg viewBox="0 0 40 40" aria-hidden="true">
-                <path d="M4 21h8l4-11 7 22 5-15 3 4h5" />
+              <svg class="mw-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#lucide-activity"></use>
               </svg>
             </div>
             <h3>A clear picture<br />of your machine.</h3>
@@ -283,7 +329,11 @@
           </article>
           <article class="feature-card">
             <span class="feature-number">02 — UNDERSTAND WHY</span>
-            <div class="feature-icon icon-spark">✳</div>
+            <div class="feature-icon icon-spark">
+              <svg class="mw-icon" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#lucide-sparkles"></use>
+              </svg>
+            </div>
             <h3>Useful context.<br />Not just numbers.</h3>
             <p>
               Plain-language insights explain what may need your attention and
@@ -294,19 +344,36 @@
               ><span
                 ><b>Memory use is elevated</b
                 ><small>Browser tabs are using 4.2 GB</small></span
-              ><span class="mini-arrow">↗</span>
+              ><span class="mini-arrow"
+                ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                  ></use></svg
+              ></span>
             </div>
           </article>
           <article class="feature-card feature-action">
             <span class="feature-number">03 — ACT WITH INTENT</span>
-            <div class="feature-icon icon-action">↗</div>
+            <div class="feature-icon icon-action">
+              <svg class="mw-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#lucide-mouse-pointer-click"
+                ></use>
+              </svg>
+            </div>
             <h3>Small actions.<br />Clear boundaries.</h3>
             <p>
               Take a few explicit, allowlisted actions. No shell access. No
               remote desktop. No surprises.
             </p>
             <div class="action-chip">
-              <span>End process</span><b>Review first</b><i>→</i>
+              <span>End process</span><b>Review first</b
+              ><i
+                ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-right"
+                  ></use></svg
+              ></i>
             </div>
           </article>
         </section>
@@ -325,8 +392,12 @@
               href="https://github.com/emanncode/machineward/blob/EmannCode01-main/SECURITY.md"
               target="_blank"
               rel="noreferrer"
-              >Read our security direction <span>↗</span></a
-            >
+              >Read our security direction
+              <svg class="inline-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                ></use></svg
+            ></a>
           </div>
           <div class="principle-list">
             <div>
@@ -362,8 +433,12 @@
               href="https://github.com/emanncode/machineward"
               target="_blank"
               rel="noreferrer"
-              >Follow on GitHub <span>↗</span></a
-            >
+              >Follow on GitHub
+              <svg class="inline-icon" aria-hidden="true" focusable="false">
+                <use
+                  href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                ></use></svg
+            ></a>
           </div>
           <div class="build-activity">
             <figure class="build-illustration">
@@ -387,7 +462,12 @@
                   <b>Project foundation</b
                   ><small>Product direction, scope and security gate</small>
                 </div>
-                <span class="log-check">✓</span>
+                <span class="log-check" role="img" aria-label="Completed"
+                  ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/icons/sprite.svg#lucide-circle-check"
+                    ></use></svg
+                ></span>
               </div>
               <div class="log-item active">
                 <span>NEXT</span>
@@ -395,7 +475,12 @@
                   <b>V0 architecture</b
                   ><small>Agent · relay · mobile app boundaries</small>
                 </div>
-                <span class="log-pending">●</span>
+                <span class="log-pending" role="img" aria-label="In progress"
+                  ><svg class="mw-icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/icons/sprite.svg#lucide-circle-dot"
+                    ></use></svg
+                ></span>
               </div>
               <div class="log-item future">
                 <span>AFTER</span>
@@ -409,8 +494,12 @@
                 href="https://github.com/emanncode/machineward/issues"
                 target="_blank"
                 rel="noreferrer"
-                >See the V0 issues <span>↗</span></a
-              >
+                >See the V0 issues
+                <svg class="inline-icon" aria-hidden="true" focusable="false">
+                  <use
+                    href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+                  ></use></svg
+              ></a>
             </div>
           </div>
         </section>
@@ -430,8 +519,12 @@
             href="https://github.com/emanncode/machineward"
             target="_blank"
             rel="noreferrer"
-            >Follow the project <span>↗</span></a
-          >
+            >Follow the project
+            <svg class="inline-icon" aria-hidden="true" focusable="false">
+              <use
+                href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+              ></use></svg
+          ></a>
         </section>
       </main>
 
@@ -446,13 +539,21 @@
             href="https://github.com/emanncode/machineward"
             target="_blank"
             rel="noreferrer"
-            >GitHub ↗</a
+            >GitHub
+            <svg class="inline-icon" aria-hidden="true" focusable="false">
+              <use
+                href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+              ></use></svg></a
           ><a
             href="https://linear.app/emanncode/project/machineward-e87dae88c42d"
             target="_blank"
             rel="noreferrer"
-            >Roadmap ↗</a
-          >
+            >Roadmap
+            <svg class="inline-icon" aria-hidden="true" focusable="false">
+              <use
+                href="/assets/icons/sprite.svg#lucide-arrow-up-right"
+              ></use></svg
+          ></a>
         </div>
         <small>© 2026 EmannCode</small>
       </footer>

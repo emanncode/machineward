@@ -1,0 +1,112 @@
+.mw-icon,
+.inline-icon {
+  display: inline-block;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+.mw-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.inline-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.button .inline-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.hero-cta-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.process-icon .mw-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.phone-action > i {
+  display: flex;
+  align-items: center;
+}
+
+.phone-action > i .mw-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.note-icon .mw-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.feature-icon .mw-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.mini-arrow .mw-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.action-chip i {
+  display: flex;
+  align-items: center;
+}
+
+.action-chip .mw-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.log-check,
+.log-pending {
+  display: flex;
+  align-items: center;
+}
+
+.log-check .mw-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.log-pending .mw-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.log-footer .inline-icon {
+  width: 13px;
+  height: 13px;
+  color: var(--mw-accent);
+}
+
+.activity-head a .inline-icon {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 700px) {
+  .hero-cta-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-cta-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
