@@ -1058,9 +1058,14 @@ h2 em {
     border-top: 1px solid var(--mw-border);
     border-bottom: 1px solid var(--mw-border);
     padding: 54px 0 78px;
+}
+
+.principles-top {
     display: grid;
     grid-template-columns: 1fr .8fr;
-    gap: 90px
+    align-items: center;
+    gap: 90px;
+    padding-bottom: 48px
 }
 
 .principles-copy h2 {
@@ -1076,42 +1081,73 @@ h2 em {
     margin: 0 0 24px
 }
 
-.principle-list {
-    padding-top: 9px
+.principles-illustration {
+    width: min(100%, 470px);
+    margin: 0 auto
 }
 
-.principle-list>div {
+.principles-illustration img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.principles-illustration figcaption {
+    margin-top: 8px;
+    color: var(--mw-text-secondary);
+    font-size: 11px;
+    line-height: 1.6
+}
+
+.principle-steps {
     display: grid;
-    grid-template-columns: 34px 1fr;
-    column-gap: 12px;
-    border-bottom: 1px solid var(--mw-border);
-    padding: 15px 0
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px
 }
 
-.principle-list>div:first-child {
-    padding-top: 0
+.principle-step {
+    position: relative;
+    min-height: 190px;
+    padding: 20px 22px;
+    border: 1px solid var(--mw-border);
+    border-radius: 8px;
+    background: var(--mw-surface-card)
 }
 
-.principle-list>div:last-child {
-    border-bottom: 0
-}
-
-.principle-list>div>span {
-    grid-row: span 2;
+.principle-step-number {
     color: var(--mw-accent);
-    font: 9px var(--mono);
-    padding-top: 3px
+    font: 10px var(--mono);
+    letter-spacing: .08em
 }
 
-.principle-list b {
-    font-size: 12px;
+.principle-step-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    margin-top: 17px;
+    border-radius: 8px;
+    background: var(--mw-accent-soft);
+    color: var(--mw-accent)
+}
+
+.principle-step-icon .mw-icon {
+    width: 17px;
+    height: 17px
+}
+
+.principle-step h3 {
+    margin: 16px 0 7px;
+    font-size: 15px;
+    line-height: 1.35;
     font-weight: 600
 }
 
-.principle-list p {
-    font-size: 10px;
+.principle-step p {
+    max-width: 34ch;
+    margin: 0;
+    font-size: 12px;
     color: var(--mw-text-secondary);
-    margin: 5px 0 0;
     line-height: 1.6
 }
 
@@ -1375,7 +1411,7 @@ h2 em {
         grid-column: 1 / -1
     }
 
-    .principles-section,
+    .principles-top,
     .build-section {
         padding-left: 0;
         padding-right: 0;
@@ -1590,9 +1626,48 @@ h2 em {
     }
 
     .principles-section {
-        grid-template-columns: 1fr;
-        gap: 35px;
         padding: 72px 0
+    }
+
+    .principles-top {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding-bottom: 35px
+    }
+
+    .principles-illustration {
+        width: min(100%, 430px)
+    }
+
+    .principle-steps {
+        grid-template-columns: 1fr;
+        gap: 10px
+    }
+
+    .principle-step {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr);
+        column-gap: 12px;
+        align-items: start;
+        min-height: 0;
+        padding: 16px
+    }
+
+    .principle-step-number {
+        grid-row: span 3;
+        padding-top: 3px
+    }
+
+    .principle-step-icon {
+        display: none
+    }
+
+    .principle-step h3 {
+        margin: 0 0 5px
+    }
+
+    .principle-step p {
+        grid-column: 2
     }
 
     .principles-copy h2 {

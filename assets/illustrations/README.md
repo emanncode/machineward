@@ -5,3 +5,5 @@
 `open-doodles-reading-side.svg` is adapted from the “reading-side” illustration in [Open Doodles](https://www.opendoodles.com/) by Pablo Stanley. Its original black and pink palette was changed to Machineward’s light ink and green accent. It accompanies the build-in-public section, where the person reading beside a plan reinforces the project notebook theme.
 
 The illustration shows a person lying down and checking their phone. Its alt text describes the scene; the caption connects it to Machineward’s purpose.
+
+`security-boundary.svg` is an original Machineward illustration. It shows a local computer and paired phone with an explicit lock boundary to explain the security section's privacy and authorization principles. It uses the landing page's surface, border, and accent colors and does not depict a cloud connection.
