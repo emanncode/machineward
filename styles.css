@@ -818,7 +818,7 @@ h2 em {
 }
 
 .intro-section {
-    padding: 124px 4% 85px;
+    padding: 54px 0 78px;
     display: grid;
     grid-template-columns: .6fr 1.4fr;
     gap: 40px
@@ -1057,7 +1057,7 @@ h2 em {
 .principles-section {
     border-top: 1px solid var(--mw-border);
     border-bottom: 1px solid var(--mw-border);
-    padding: 112px 4%;
+    padding: 54px 0 78px;
     display: grid;
     grid-template-columns: 1fr .8fr;
     gap: 90px
@@ -1116,7 +1116,7 @@ h2 em {
 }
 
 .build-section {
-    padding: 120px 4%;
+    padding: 54px 0 78px;
     display: grid;
     grid-template-columns: 1fr .95fr;
     gap: 80px;
@@ -1261,7 +1261,7 @@ h2 em {
     border: 1px solid var(--mw-border-strong);
     border-radius: 10px;
     background: radial-gradient(ellipse at 50% 100%, rgb(197 244 119 / 10%), transparent 59%), var(--mw-surface);
-    padding: 83px 20px 79px;
+    padding: 54px 20px 78px;
     margin: 0 4% 80px
 }
 
