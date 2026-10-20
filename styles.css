@@ -1061,10 +1061,6 @@ h2 em {
 }
 
 .principles-top {
-    display: grid;
-    grid-template-columns: 1fr .8fr;
-    align-items: center;
-    gap: 90px;
     padding-bottom: 48px
 }
 
@@ -1079,24 +1075,6 @@ h2 em {
     line-height: 1.9;
     max-width: 390px;
     margin: 0 0 24px
-}
-
-.principles-illustration {
-    width: min(100%, 470px);
-    margin: 0 auto
-}
-
-.principles-illustration img {
-    display: block;
-    width: 100%;
-    height: auto
-}
-
-.principles-illustration figcaption {
-    margin-top: 8px;
-    color: var(--mw-text-secondary);
-    font-size: 11px;
-    line-height: 1.6
 }
 
 .principle-steps {
@@ -1630,13 +1608,7 @@ h2 em {
     }
 
     .principles-top {
-        grid-template-columns: 1fr;
-        gap: 34px;
         padding-bottom: 35px
-    }
-
-    .principles-illustration {
-        width: min(100%, 430px)
     }
 
     .principle-steps {
