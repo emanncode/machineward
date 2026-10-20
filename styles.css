@@ -1061,6 +1061,10 @@ h2 em {
 }
 
 .principles-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .82fr);
+    align-items: center;
+    gap: clamp(36px, 7vw, 90px);
     padding-bottom: 48px
 }
 
@@ -1075,6 +1079,67 @@ h2 em {
     line-height: 1.9;
     max-width: 390px;
     margin: 0 0 24px
+}
+
+.security-gate {
+    padding: 8px 0 8px clamp(22px, 3vw, 40px);
+    border-left: 1px solid var(--mw-border)
+}
+
+.security-gate-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.security-gate-label {
+    margin: 0;
+    color: var(--mw-accent);
+    font: 10px var(--mono);
+    letter-spacing: .12em;
+    text-transform: uppercase
+}
+
+.security-gate-note {
+    color: var(--mw-text-secondary);
+    font-size: 10px
+}
+
+.security-gate>p {
+    max-width: 38ch;
+    margin: 19px 0 20px;
+    font-size: 17px;
+    line-height: 1.5
+}
+
+.security-gate-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.security-gate-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    border-top: 1px solid var(--mw-border);
+    color: var(--mw-text-secondary);
+    font-size: 11px;
+    line-height: 1.45
+}
+
+.security-gate-list li::before {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    border: 1px solid var(--mw-accent);
+    border-radius: 50%;
+    content: ""
 }
 
 .principle-steps {
@@ -1396,6 +1461,15 @@ h2 em {
         gap: 45px
     }
 
+    .principles-top {
+        grid-template-columns: 1fr;
+        gap: 34px
+    }
+
+    .security-gate {
+        padding-left: 22px
+    }
+
     .build-section {
         grid-template-columns: 1fr;
         gap: 45px
@@ -1609,6 +1683,10 @@ h2 em {
 
     .principles-top {
         padding-bottom: 35px
+    }
+
+    .security-gate-list {
+        gap: 0 14px
     }
 
     .principle-steps {
