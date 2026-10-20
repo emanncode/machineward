@@ -38,8 +38,16 @@
               "type": "object",
               "required": ["agent_id", "agent_version", "os", "arch"],
               "properties": {
-                "agent_id": { "type": "string", "minLength": 1, "maxLength": 128 },
-                "agent_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+                "agent_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "agent_version": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
                 "os": { "const": "linux" },
                 "arch": { "const": "amd64" }
               },
@@ -59,8 +67,16 @@
               "type": "object",
               "required": ["phone_id", "agent_id"],
               "properties": {
-                "phone_id": { "type": "string", "minLength": 1, "maxLength": 128 },
-                "agent_id": { "type": "string", "minLength": 1, "maxLength": 128 }
+                "phone_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "agent_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                }
               },
               "additionalProperties": false
             }
@@ -108,7 +124,14 @@
             "type": { "const": "metrics.snapshot" },
             "payload": {
               "type": "object",
-              "required": ["collected_at", "cpu", "memory", "swap", "processes", "processes_skipped"],
+              "required": [
+                "collected_at",
+                "cpu",
+                "memory",
+                "swap",
+                "processes",
+                "processes_skipped"
+              ],
               "properties": {
                 "collected_at": { "type": "string", "format": "date-time" },
                 "cpu": {
@@ -129,18 +152,28 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": ["pid", "name", "cpu_percent", "memory_bytes", "started_at_unix_ms"],
+                    "required": [
+                      "pid",
+                      "name",
+                      "cpu_percent",
+                      "memory_bytes",
+                      "started_at_unix_ms"
+                    ],
                     "properties": {
                       "pid": { "type": "integer", "minimum": 1 },
                       "name": { "type": "string", "maxLength": 256 },
-                    "cpu_percent": { "type": "number", "minimum": 0 },
+                      "cpu_percent": { "type": "number", "minimum": 0 },
                       "memory_bytes": { "type": "integer", "minimum": 0 },
                       "started_at_unix_ms": { "type": "integer", "minimum": 0 }
                     },
                     "additionalProperties": false
                   }
                 },
-                "processes_skipped": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+                "processes_skipped": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4294967295
+                }
               },
               "additionalProperties": false
             }
